@@ -1,0 +1,113 @@
+/*
+	filter / sort
+*/
+.filter {
+	margin: 0 0 30px;
+
+	* {
+		box-sizing: border-box;
+	}
+
+	fieldset {
+		background-color: $color-passive;
+		border: none;
+		color: #fff;
+		margin: 0;
+		padding: 3px;
+		text-align: right;
+
+		label {
+			display: inline-block;
+			vertical-align: middle;
+		}
+
+		input {
+			height: 2.5rem;
+			border: none;
+			margin: 0;
+			padding: 0.5em;
+			vertical-align: middle;
+		}
+
+		button {
+			height: 2.5rem;
+			vertical-align: middle;
+		}
+	}
+
+	.wrapper,
+	ol {
+		border: solid 3px $color-passive;
+		border-top: none;
+		margin: 0;
+		max-height: 240px;
+		overflow-y: auto;
+	}
+
+	table {
+		margin: 0;
+		width: 100%;
+
+		tr {}
+
+		th {}
+
+		td {
+			vertical-align: middle;
+
+			img {
+				border: solid 1px #333;
+				height: auto;
+				width: 32px;
+			}
+		}
+	}
+
+	ol {
+		padding: 10px;
+
+		li {
+			display: inline-block;
+			list-style-type: none;
+			margin: 0 5px 5px 0;
+			padding: 0;
+
+			figure {
+				display: block;
+				margin: 0;
+				padding: 0;
+
+				img {
+					border: solid 1px #333;
+				}
+
+				figcaption {}
+			}
+
+			time {
+				display: block;
+			}
+
+			em {
+				display: block;
+				float: right;
+			}
+
+			&.filter-show {
+				display: inline-block;
+			}
+		}
+	}
+
+	.filter-hide {
+		display: none;
+	}
+
+	.filter-show {
+		display: block;
+	}
+
+	tr.filter-show {
+		display: table-row;
+	}
+}
