@@ -2,8 +2,6 @@
 
 Allows the contents of a table or list to be filtered by keyword.
 
-Try the <a href="http://www.woollymittens.nl/default.php?url=useful-filter">demo</a>.
-
 ## How to include the script
 
 The stylesheet is best included in the header of the document.
