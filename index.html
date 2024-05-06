@@ -1,10 +1,212 @@
 <!DOCTYPE html>
 <html>
 	<head>
-    <title>Redirect to demo</title>
-		<script>document.location.replace('./dist/');</script>
+		<meta charset="UTF-8" />
+		<title>filter.js: Data Filtering</title>
+		<style>
+			html { font-family:Sans-Serif; font-size:75%; height:100%; }
+			body { _height:100%; line-height:180%; margin:0; min-height:100%; padding:1%; }
+			.example { max-width:960px; margin:0 auto; padding:0; clear:both; }
+			.example > article, .example > aside { width:98%; padding:2%; }
+			.example-left > article, .example-left > aside { width:48%; padding:1%; float:left; }
+			.example-right > article, .example-right > aside { width:48%; padding:1%; float:right; }
+		</style>
 	</head>
 	<body>
-		<a href="./dist/">Start</a>
+		<section class="example example-right">
+			<article>
+				<h2>Data Filtering</h2>
+				<p>This script allows the contents of a table or list to be filtered by keyword.</p>
+				<p><a class="button downloadButton" href="http://github.com/WoollyMittens/useful-filter" target="_blank">Download (GitHub)</a></p>
+			</article>
+			<aside>
+
+				<!-- Cut below this -->
+				<style>@import url("./css/filter.css");</style>
+				<section class="filter" id="filterA">
+					<fieldset>
+						<label>Keyword: <input name="fs_keyword_a" type="text"/></label>
+						<button class="button">Filter</button>
+					</fieldset>
+					<ol>
+						<li>
+							<figure><img alt="Lorem ipsum" src="./img/figure_1.jpg"/><figcaption>Lorem ipsum</figcaption></figure>
+							<em>A</em>
+							<time datetime="2012-01-12">12/1/2012</time>
+						</li>
+						<li>
+							<figure><img alt="Dolor sit amet" src="./img/figure_2.jpg"/><figcaption>Dolor sit amet</figcaption></figure>
+							<em>A</em>
+							<time datetime="2012-01-11">11/1/2012</time>
+						</li>
+						<li>
+							<figure><img alt="Consectetur adipisicing" src="./img/figure_3.jpg"/><figcaption>Consectetur adipisicing</figcaption></figure>
+							<em>B</em>
+							<time datetime="2012-02-10">10/2/2012</time>
+						</li>
+						<li>
+							<figure><img alt="elit sed do eiusmod" src="./img/figure_4.jpg"/><figcaption>elit sed do eiusmod</figcaption></figure>
+							<em>B</em>
+							<time datetime="2012-02-09">9/2/2012</time>
+						</li>
+						<li>
+							<figure><img alt="tempor incididunt ut" src="./img/figure_5.jpg"/><figcaption>tempor incididunt ut</figcaption></figure>
+							<em>B</em>
+							<time datetime="2013-02-08">8/2/2013</time>
+						</li>
+						<li>
+							<figure><img alt="labore et dolore magna" src="./img/figure_6.jpg"/><figcaption>labore et dolore magna</figcaption></figure>
+							<em>C</em>
+							<time datetime="2013-02-07">7/2/2013</time>
+						</li>
+						<li>
+							<figure><img alt="aliqua ut enim ad" src="./img/figure_7.jpg"/><figcaption>aliqua ut enim ad</figcaption></figure>
+							<em>C</em>
+							<time datetime="2012-02-06">6/2/2012</time>
+						</li>
+						<li>
+							<figure><img alt="minim veniam quis" src="./img/figure_8.jpg"/><figcaption>minim veniam quis</figcaption></figure>
+							<em>C</em>
+							<time datetime="2012-01-05">5/1/2012</time>
+						</li>
+						<li>
+							<figure><img alt="nostrud exercitation" src="./img/figure_9.jpg"/><figcaption>nostrud exercitation</figcaption></figure>
+							<em>D</em>
+							<time datetime="2012-01-04">4/1/2012</time>
+						</li>
+						<li>
+							<figure><img alt="ullamco laboris nisi" src="./img/figure_0.jpg"/><figcaption>ullamco laboris nisi</figcaption></figure>
+							<em>D</em>
+							<time datetime="2012-01-03">3/1/2012</time>
+						</li>
+					</ol>
+				</section>
+				<script src="./lib/transitions.js"></script>
+				<script src="./js/filter.js"></script>
+				<script>
+				//<!--
+					var filterA = new Filter({
+						'element' : document.getElementById('filterA'),
+						'keyword' : 'fieldset input',
+						'button' : 'fieldset button',
+						'grouping' : 'tbody tr, li',
+						'data' : '*'
+					});
+				//-->
+				</script>
+				<!-- Cut above this -->
+
+				<!-- Cut below this -->
+				<style>@import url("./css/filter.css");</style>
+				<section class="filter" id="filterB">
+					<fieldset>
+						<label>
+							Keyword:
+							<input name="fs_keyword_b" type="text"/>
+						</label>
+						<button class="button">Filter</button>
+					</fieldset>
+					<div class="wrapper">
+						<table>
+							<thead>
+								<tr>
+									<th>#</th>
+									<th>Photo</th>
+									<th>Name</th>
+									<th>Date</th>
+									<th>Type</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>1</td>
+									<td><img alt="Lorem ipsum" src="./img/figure_1.jpg"/></td>
+									<td>Lorem ipsum</td>
+									<td>12/1/2012</td>
+									<td>A</td>
+								</tr>
+								<tr>
+									<td>2</td>
+									<td><img alt="Dolor sit amet" src="./img/figure_2.jpg"/></td>
+									<td>Dolor sit amet</td>
+									<td>11/1/2012</td>
+									<td>A</td>
+								</tr>
+								<tr>
+									<td>3</td>
+									<td><img alt="Consectetur adipisicing" src="./img/figure_3.jpg"/></td>
+									<td>Consectetur adipisicing</td>
+									<td>10/2/2012</td>
+									<td>B</td>
+								</tr>
+								<tr>
+									<td>4</td>
+									<td><img alt="elit sed do eiusmod" src="./img/figure_4.jpg"/></td>
+									<td>elit sed do eiusmod</td>
+									<td>9/2/2012</td>
+									<td>B</td>
+								</tr>
+								<tr>
+									<td>5</td>
+									<td><img alt="tempor incididunt ut" src="./img/figure_5.jpg"/></td>
+									<td>tempor incididunt ut</td>
+									<td>8/2/2013</td>
+									<td>B</td>
+								</tr>
+								<tr>
+									<td>6</td>
+									<td><img alt="labore et dolore magna" src="./img/figure_6.jpg"/></td>
+									<td>labore et dolore magna</td>
+									<td>7/2/2013</td>
+									<td>C</td>
+								</tr>
+								<tr>
+									<td>7</td>
+									<td><img alt="aliqua ut enim ad" src="./img/figure_7.jpg"/></td>
+									<td>aliqua ut enim ad</td>
+									<td>6/2/2012</td>
+									<td>C</td>
+								</tr>
+								<tr>
+									<td>8</td>
+									<td><img alt="minim veniam quis" src="./img/figure_8.jpg"/></td>
+									<td>minim veniam quis</td>
+									<td>5/1/2012</td>
+									<td>C</td>
+								</tr>
+								<tr>
+									<td>9</td>
+									<td><img alt="nostrud exercitation" src="./img/figure_9.jpg"/></td>
+									<td>nostrud exercitation</td>
+									<td>4/1/2012</td>
+									<td>D</td>
+								</tr>
+								<tr>
+									<td>10</td>
+									<td><img alt="ullamco laboris nisi" src="./img/figure_0.jpg"/></td>
+									<td>ullamco laboris nisi</td>
+									<td>3/1/2012</td>
+									<td>D</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</section>
+				<script src="./js/filter.js"></script>
+				<script>
+				//<!--
+					var filterB = new Filter({
+						'element' : document.getElementById('filterB'),
+						'keyword' : 'fieldset input',
+						'button' : 'fieldset button',
+						'grouping' : 'tbody tr, li',
+						'data' : '*'
+					});
+				//-->
+				</script>
+				<!-- Cut above this -->
+
+			</aside>
+		</section>
 	</body>
 </html>
